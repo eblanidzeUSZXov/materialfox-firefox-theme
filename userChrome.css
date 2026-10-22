@@ -1,0 +1,549 @@
+:root {
+  --md-primary: #386a20;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #b8f397;
+  --md-on-primary-container: #042100;
+  --md-secondary: #52634f;
+  --md-on-secondary: #ffffff;
+  --md-secondary-container: #d5e8cf;
+  --md-on-secondary-container: #101f0e;
+  --md-tertiary: #386667;
+  --md-on-tertiary: #ffffff;
+  --md-tertiary-container: #bcebec;
+  --md-on-tertiary-container: #002020;
+  --md-surface: #f7fbf1;
+  --md-surface-dim: #d8e4d0;
+  --md-surface-container-lowest: #ffffff;
+  --md-surface-container-low: #f1f5eb;
+  --md-surface-container: #ecefe6;
+  --md-surface-container-high: #e6e9e0;
+  --md-surface-container-highest: #e0e4da;
+  --md-on-surface: #191d17;
+  --md-on-surface-variant: #424940;
+  --md-outline: #72796f;
+  --md-outline-variant: #c2c9bd;
+  --md-inverse-surface: #2e322b;
+  --md-inverse-on-surface: #eff2ea;
+  --md-state-hover: rgba(56, 106, 32, 0.08);
+  --md-state-focus: rgba(56, 106, 32, 0.12);
+  --md-state-pressed: rgba(56, 106, 32, 0.12);
+  --md-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --md-shadow-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --md-shadow-3: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --md-shape-xs: 4px;
+  --md-shape-sm: 8px;
+  --md-shape-md: 12px;
+  --md-shape-lg: 16px;
+  --md-shape-xl: 28px;
+  --md-shape-full: 999px;
+  --md-font: "Google Sans", "Roboto", "Noto Sans", system-ui, sans-serif;
+
+  --toolbar-bgcolor: var(--md-surface) !important;
+  --toolbar-color: var(--md-on-surface) !important;
+  --toolbarbutton-icon-fill: var(--md-on-surface) !important;
+  --toolbarbutton-icon-fill-attention: var(--md-primary) !important;
+  --toolbarbutton-hover-background: var(--md-state-hover) !important;
+  --toolbarbutton-active-background: var(--md-state-pressed) !important;
+  --lwt-accent-color: var(--md-surface) !important;
+  --lwt-text-color: var(--md-on-surface) !important;
+  --lwt-toolbar-field-background-color: var(--md-surface-container-high) !important;
+  --lwt-toolbar-field-color: var(--md-on-surface) !important;
+  --lwt-toolbar-field-border-color: var(--md-outline-variant) !important;
+  --lwt-toolbar-field-focus: var(--md-surface-container-high) !important;
+  --lwt-toolbar-field-highlight: var(--md-primary) !important;
+  --lwt-toolbar-field-highlight-text: var(--md-on-primary) !important;
+  --lwt-selected-tab-background-color: var(--md-primary-container) !important;
+  --tab-selected-bgcolor: var(--md-primary-container) !important;
+  --tab-selected-color: var(--md-on-primary-container) !important;
+  --tab-hover-background-color: var(--md-state-hover) !important;
+  --tab-loading-fill: var(--md-primary) !important;
+  --tab-min-height: 38px !important;
+  --tab-border-radius: var(--md-shape-lg) !important;
+  --arrowpanel-background: var(--md-surface-container) !important;
+  --arrowpanel-color: var(--md-on-surface) !important;
+  --arrowpanel-border-color: var(--md-outline-variant) !important;
+  --arrowpanel-border-radius: var(--md-shape-lg) !important;
+  --panel-background: var(--md-surface-container) !important;
+  --panel-color: var(--md-on-surface) !important;
+  --panel-border-color: var(--md-outline-variant) !important;
+  --panel-border-radius: var(--md-shape-lg) !important;
+  --button-bgcolor: transparent !important;
+  --button-hover-bgcolor: var(--md-state-hover) !important;
+  --button-active-bgcolor: var(--md-state-pressed) !important;
+  --focus-outline-color: var(--md-primary) !important;
+  --sidebar-background-color: var(--md-surface-container-low) !important;
+  --sidebar-text-color: var(--md-on-surface) !important;
+  --sidebar-border-color: var(--md-outline-variant) !important;
+  --urlbar-box-bgcolor: var(--md-secondary-container) !important;
+  --urlbar-box-text-color: var(--md-on-secondary-container) !important;
+  --urlbar-box-hover-bgcolor: var(--md-surface-container-highest) !important;
+  --urlbar-box-focus-bgcolor: var(--md-surface-container-highest) !important;
+  scrollbar-color: var(--md-primary) var(--md-surface-container);
+  scrollbar-width: thin;
+}
+
+:root,
+menupopup,
+panel,
+#urlbar-input,
+.tab-label,
+toolbarbutton,
+.bookmark-item,
+findbar,
+.findbar-textbox,
+#statuspanel-label {
+  font-family: var(--md-font) !important;
+}
+
+#main-window,
+window {
+  background-color: var(--md-surface) !important;
+  color: var(--md-on-surface) !important;
+}
+
+#navigator-toolbox {
+  background-color: var(--md-surface) !important;
+  background-image: none !important;
+  border-bottom: 1px solid var(--md-outline-variant) !important;
+  box-shadow: none !important;
+  --tabs-navbar-shadow-size: 0px !important;
+}
+
+#navigator-toolbox::after {
+  border-bottom: none !important;
+}
+
+#TabsToolbar,
+#titlebar,
+#nav-bar,
+#PersonalToolbar,
+#toolbar-menubar {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: var(--md-on-surface) !important;
+}
+
+#nav-bar {
+  border-top: 0 !important;
+  padding-block: 6px !important;
+}
+
+.titlebar-spacer {
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab {
+  padding-inline: 2px !important;
+}
+
+.tabbrowser-tab::before,
+.tabbrowser-tab::after {
+  display: none !important;
+}
+
+.tab-background {
+  position: relative !important;
+  margin-block: 4px !important;
+  border-radius: var(--md-shape-lg) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: background-color 180ms ease,
+              transform 220ms cubic-bezier(0.2, 0, 0, 1),
+              box-shadow 180ms ease !important;
+}
+
+.tab-background::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: url("leaf-tab.svg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  opacity: 0;
+  transform: translateY(3px) scale(0.92);
+  transform-origin: 50% 50%;
+  transition: opacity 180ms cubic-bezier(0.2, 0, 0, 1),
+              transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 2px 2px rgba(25, 29, 23, 0.16));
+  pointer-events: none !important;
+  will-change: opacity, transform;
+}
+
+.tabbrowser-tab:hover .tab-background {
+  background-color: var(--md-state-hover) !important;
+  transform: translateY(-1px) !important;
+}
+
+.tabbrowser-tab:active .tab-background {
+  transform: translateY(0) scale(0.992) !important;
+}
+
+.tabbrowser-tab[selected] .tab-background,
+.tabbrowser-tab[visuallyselected] .tab-background {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab[selected] .tab-background::before,
+.tabbrowser-tab[visuallyselected] .tab-background::before {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.tabbrowser-tab[pinned] .tab-background::before {
+  display: none !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+  transition: min-width 260ms cubic-bezier(0.2, 0, 0, 1),
+              max-width 260ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+.tabbrowser-tab[selected]:not([pinned]),
+.tabbrowser-tab[visuallyselected]:not([pinned]) {
+  min-width: 250px !important;
+  max-width: 250px !important;
+}
+
+.tabbrowser-tab[pinned][selected] .tab-background,
+.tabbrowser-tab[pinned][visuallyselected] .tab-background {
+  background-image: none !important;
+  background-color: var(--md-primary-container) !important;
+  border-radius: var(--md-shape-lg) !important;
+}
+
+#allTabsMenu-allTabsView .all-tabs-item[selected] > toolbarbutton {
+  background-color: transparent !important;
+  background-image: url("leaf-tab.svg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  border-radius: 0 !important;
+  color: var(--md-on-primary-container) !important;
+  font-weight: 600 !important;
+}
+
+.tab-content {
+  padding-inline: 10px !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-content {
+  padding-inline: 18px !important;
+}
+
+.tab-label {
+  color: var(--md-on-surface) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1px !important;
+  transition: color 180ms ease !important;
+}
+
+.tabbrowser-tab[selected] .tab-label,
+.tabbrowser-tab[visuallyselected] .tab-label {
+  color: var(--md-on-primary-container) !important;
+  font-weight: 600 !important;
+}
+
+.tab-icon-image {
+  border-radius: var(--md-shape-xs) !important;
+  transition: transform 200ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+.tabbrowser-tab[selected] .tab-icon-image,
+.tabbrowser-tab[visuallyselected] .tab-icon-image {
+  transform: scale(1.06);
+}
+
+.tab-close-button {
+  border-radius: var(--md-shape-full) !important;
+  transition: background-color 160ms ease,
+              transform 180ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+.tab-close-button:hover {
+  background-color: var(--md-state-hover) !important;
+  transform: scale(1.1);
+}
+
+.tab-close-button:active {
+  transform: scale(0.92);
+}
+
+#tabs-newtab-button,
+#new-tab-button {
+  border-radius: var(--md-shape-full) !important;
+  transition: background-color 160ms ease,
+              transform 180ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+#tabs-newtab-button:hover,
+#new-tab-button:hover {
+  background-color: var(--md-state-hover) !important;
+  transform: scale(1.06);
+}
+
+#tabs-newtab-button:active,
+#new-tab-button:active {
+  transform: scale(0.94);
+}
+
+.titlebar-button {
+  border-radius: var(--md-shape-sm) !important;
+}
+
+.titlebar-button:hover {
+  background-color: var(--md-state-hover) !important;
+}
+
+#urlbar-container {
+  padding-block: 0 !important;
+}
+
+#urlbar {
+  font-size: 14px !important;
+}
+
+#urlbar-background {
+  background-color: var(--md-surface-container-high) !important;
+  border: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-full) !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease !important;
+}
+
+#urlbar:hover > #urlbar-background {
+  background-color: var(--md-surface-container-highest) !important;
+  border-color: var(--md-outline) !important;
+}
+
+#urlbar[focused] > #urlbar-background,
+#urlbar:focus-within > #urlbar-background {
+  background-color: var(--md-surface-container-high) !important;
+  border-color: var(--md-primary) !important;
+  box-shadow: inset 0 0 0 1px var(--md-primary) !important;
+}
+
+#urlbar-input,
+.searchbar-textbox {
+  color: var(--md-on-surface) !important;
+  font-size: 14px !important;
+}
+
+#urlbar-input::placeholder,
+.searchbar-textbox::placeholder {
+  color: var(--md-on-surface-variant) !important;
+}
+
+#urlbar-input::selection {
+  background-color: var(--md-primary) !important;
+  color: var(--md-on-primary) !important;
+}
+
+.urlbarView {
+  background-color: var(--md-surface-container) !important;
+  color: var(--md-on-surface) !important;
+  border: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-lg) !important;
+  box-shadow: var(--md-shadow-2) !important;
+}
+
+.urlbarView-row {
+  border-radius: var(--md-shape-sm) !important;
+}
+
+.urlbarView-row:hover,
+.urlbarView-row[selected] {
+  background-color: var(--md-secondary-container) !important;
+}
+
+.urlbarView-title {
+  color: var(--md-on-surface) !important;
+}
+
+.urlbarView-url {
+  color: var(--md-primary) !important;
+}
+
+#searchbar {
+  background-color: var(--md-surface-container-high) !important;
+  border: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-full) !important;
+  color: var(--md-on-surface) !important;
+}
+
+#searchbar:focus-within {
+  border-color: var(--md-primary) !important;
+  box-shadow: inset 0 0 0 1px var(--md-primary) !important;
+}
+
+.toolbarbutton-1 > .toolbarbutton-icon,
+.toolbarbutton-1 > .toolbarbutton-badge-stack {
+  border-radius: var(--md-shape-full) !important;
+  transition: background-color 0.15s ease !important;
+}
+
+.toolbarbutton-1:hover > .toolbarbutton-icon,
+.toolbarbutton-1:hover > .toolbarbutton-badge-stack,
+.toolbarbutton-1[open] > .toolbarbutton-icon,
+.toolbarbutton-1[open] > .toolbarbutton-badge-stack {
+  background-color: var(--md-state-hover) !important;
+}
+
+.toolbarbutton-1:active > .toolbarbutton-icon,
+.toolbarbutton-1:active > .toolbarbutton-badge-stack {
+  background-color: var(--md-state-pressed) !important;
+}
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon,
+#reload-button > .toolbarbutton-icon,
+#stop-button > .toolbarbutton-icon {
+  border-radius: var(--md-shape-full) !important;
+}
+
+#PersonalToolbar {
+  padding-block: 4px !important;
+}
+
+toolbarbutton.bookmark-item {
+  border-radius: var(--md-shape-full) !important;
+  padding: 4px 10px !important;
+  font-size: 13px !important;
+}
+
+toolbarbutton.bookmark-item:hover {
+  background-color: var(--md-state-hover) !important;
+}
+
+menupopup {
+  appearance: none !important;
+  background-color: var(--md-surface-container) !important;
+  color: var(--md-on-surface) !important;
+  border: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-md) !important;
+  box-shadow: var(--md-shadow-2) !important;
+  padding: 6px !important;
+}
+
+menuitem,
+menu {
+  border-radius: var(--md-shape-sm) !important;
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+}
+
+menuitem:hover,
+menu:hover,
+menuitem[_moz-menuactive="true"],
+menu[_moz-menuactive="true"] {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+}
+
+menuseparator {
+  border-color: var(--md-outline-variant) !important;
+}
+
+panel {
+  --panel-background: var(--md-surface-container) !important;
+  --panel-color: var(--md-on-surface) !important;
+  --panel-border-color: var(--md-outline-variant) !important;
+  --panel-border-radius: var(--md-shape-lg) !important;
+}
+
+.panel-arrowcontent {
+  background-color: var(--md-surface-container) !important;
+  color: var(--md-on-surface) !important;
+  border-radius: var(--md-shape-lg) !important;
+}
+
+.panel-arrow {
+  fill: var(--md-surface-container) !important;
+  stroke: var(--md-outline-variant) !important;
+}
+
+panelview {
+  background-color: var(--md-surface-container) !important;
+  color: var(--md-on-surface) !important;
+}
+
+.subviewbutton {
+  border-radius: var(--md-shape-sm) !important;
+}
+
+.subviewbutton:hover {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+}
+
+#sidebar-box {
+  background-color: var(--md-surface-container-low) !important;
+  border: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-lg) !important;
+  margin: 6px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+#sidebar-header {
+  background-color: var(--md-surface-container) !important;
+  color: var(--md-on-surface) !important;
+  border-bottom: 1px solid var(--md-outline-variant) !important;
+}
+
+#sidebar,
+#sidebar-box sidebarheader {
+  color: var(--md-on-surface) !important;
+}
+
+#sidebar-splitter {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+findbar {
+  background-color: var(--md-surface-container-high) !important;
+  color: var(--md-on-surface) !important;
+  border-top: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-lg) var(--md-shape-lg) 0 0 !important;
+  margin: 0 8px !important;
+}
+
+.findbar-textbox {
+  background-color: var(--md-surface-container-lowest) !important;
+  color: var(--md-on-surface) !important;
+  border: 1px solid var(--md-outline-variant) !important;
+  border-radius: var(--md-shape-full) !important;
+  padding-inline: 12px !important;
+}
+
+.findbar-textbox:focus {
+  border-color: var(--md-primary) !important;
+  box-shadow: inset 0 0 0 1px var(--md-primary) !important;
+}
+
+#statuspanel-label {
+  background-color: var(--md-inverse-surface) !important;
+  color: var(--md-inverse-on-surface) !important;
+  border: none !important;
+  border-radius: var(--md-shape-sm) !important;
+  box-shadow: var(--md-shadow-2) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabbrowser-tab,
+  .tab-background,
+  .tab-background::before,
+  .tab-label,
+  .tab-icon-image,
+  .tab-close-button,
+  #tabs-newtab-button,
+  #new-tab-button {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

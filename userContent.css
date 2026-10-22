@@ -1,0 +1,52 @@
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
+  :root {
+    color-scheme: light !important;
+
+    --newtab-background-color: #f7fbf1 !important;
+    --newtab-background-color-secondary: #e6e9e0 !important;
+    --newtab-text-primary-color: #191d17 !important;
+    --newtab-text-secondary-color: #424940 !important;
+    --newtab-text-conditional-color: #191d17 !important;
+    --newtab-primary-action-background: #386a20 !important;
+    --newtab-primary-element-hover-color: #b8f397 !important;
+    --newtab-primary-element-active-color: #9ade77 !important;
+    --newtab-element-hover-color: rgba(56, 106, 32, 0.08) !important;
+    --newtab-element-active-color: rgba(56, 106, 32, 0.14) !important;
+    --newtab-element-secondary-color: #ecefe6 !important;
+    --newtab-border-color: #c2c9bd !important;
+    --newtab-wordmark-color: #386a20 !important;
+    --newtab-search-icon-color: #386a20 !important;
+    --newtab-contextual-text-primary-color: #191d17 !important;
+  }
+
+  body,
+  .outer-wrapper,
+  .base-content-fallback {
+    background-color: #f7fbf1 !important;
+    color: #191d17 !important;
+  }
+
+  .logo-and-wordmark .wordmark {
+    fill: #386a20 !important;
+  }
+
+  .top-site-outer .tile,
+  .card-outer,
+  .ds-card {
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 1px 3px rgba(25, 29, 23, 0.12) !important;
+  }
+
+  .top-site-outer .title,
+  .card-title,
+  .ds-card-title {
+    color: #191d17 !important;
+  }
+
+  .section-title,
+  .click-target,
+  .ds-header {
+    color: #424940 !important;
+  }
+}
